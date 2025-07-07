@@ -9,29 +9,33 @@
 
 body {
   background: #0e0e0e;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .Container {
   background: #1a1a1a;
   border-radius: 20px;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  max-width: 360px;
 }
 
 input {
-  width: 320px;
+  width: 100%;
   border: none;
   border-radius: 10px;
   padding: 20px;
   background: #121212;
   color: #00FFAB;
-  font-size: 40px;
+  font-size: 32px;
   text-align: right;
   margin-bottom: 20px;
+  word-wrap: break-word;
 }
 
 input::placeholder {
@@ -39,16 +43,16 @@ input::placeholder {
 }
 
 button {
-  width: 60px;
-  height: 60px;
-  margin: 10px;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   background: #2c2c2c;
   color: #eee;
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
   transition: all 0.2s ease;
+  flex: 1 1 20%;
+  margin: 5px;
+  padding: 20px 0;
 }
 
 button:hover {
@@ -82,4 +86,24 @@ button:hover {
 .modulusBtn:hover,
 .backspaceBtn:hover {
   background: #555;
+}
+
+.Container > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  input {
+    font-size: 28px;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 15px 0;
+    flex: 1 1 22%;
+    margin: 4px;
+  }
 }
